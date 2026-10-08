@@ -1,0 +1,14 @@
+# Generated results and builds
+/figures/
+/data/
+build/
+dist/
+*.egg-info/
+
+# Local environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.*cache/
+.mplconfig/
+.cache/

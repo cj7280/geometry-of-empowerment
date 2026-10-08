@@ -1,0 +1,10 @@
+include CITATION.cff
+include LICENSE
+include README.md
+include THIRD_PARTY_NOTICES.md
+include make_all_figures.py
+include makefile
+include uv.lock
+
+recursive-include plotting_scripts *.py
+recursive-include tests *.py

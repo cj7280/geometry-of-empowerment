@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "The Geometry of Empowerment"
+message: "If you use this software or its figures, please cite the accompanying paper."
+type: software
+authors:
+  - given-names: Catherine
+    family-names: Ji
+  - given-names: Vivek
+    family-names: Myers
+  - given-names: Sergey
+    family-names: Levine
+  - given-names: Benjamin
+    family-names: Eysenbach
+license: MIT
+url: "https://empowerment-geometry.github.io/"

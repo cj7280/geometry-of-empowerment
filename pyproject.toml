@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geometry-of-empowerment"
+version = "0.1.0"
+license = "MIT"
+license-files = [
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "plotting/fonts/GUST-FONT-LICENSE.txt",
+    "plotting/assets/fontawesome/LICENSE.txt",
+]
+authors = [
+    { name = "Catherine Ji" },
+    { name = "Vivek Myers" },
+    { name = "Sergey Levine" },
+    { name = "Benjamin Eysenbach" },
+]
+description = "Skills, empowerment, and adaptation bounds on the occupancy simplex: paper figures and core solvers"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0,<3",
+    "scipy>=1.14,<2",
+    "matplotlib>=3.9,<4",
+    "cvxpy>=1.9.2",
+    "fonttools>=4.50",
+]
+
+[project.urls]
+Repository = "https://github.com/cj7280/geometry-of-empowerment"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.16.1",
+]
+
+[tool.setuptools]
+include-package-data = false
+packages = ["environments", "plotting", "utils"]
+
+[tool.setuptools.package-data]
+plotting = [
+  "fonts/*.otf",
+  "fonts/*.txt",
+  "assets/fontawesome/LICENSE.txt",
+  "assets/fontawesome/svgs/solid/*.svg",
+  "assets/sharp_geometric/*.svg",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff.lint]
+# Enable E9 syntax checks and Pyflakes (F); leave style rules disabled.
+select = ["E9", "F"]
